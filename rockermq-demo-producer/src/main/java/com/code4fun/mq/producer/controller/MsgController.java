@@ -1,7 +1,7 @@
 package com.code4fun.mq.producer.controller;
 
-import com.code4fun.mq.producer.dto.MsgDto;
 import com.code4fun.mq.producer.service.MsgService;
+import com.code4fun.mq.utils.dto.MsgDto;
 import org.apache.rocketmq.client.producer.SendCallback;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
@@ -36,5 +36,14 @@ public class MsgController {
             LOGGER.error("消息发送异常", e);
         }
         return null;
+    }
+
+    @RequestMapping(value = "/order")
+    public void orderMsg() {
+        try {
+            msgService.sendOrderMsg();
+        } catch (Exception e) {
+            LOGGER.error("发送消息异常：{}", e);
+        }
     }
 }

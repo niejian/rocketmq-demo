@@ -17,6 +17,7 @@
     <modules>
         <module>rockermq-demo-producer</module>
         <module>rockermq-demo-consumer</module>
+        <module>rocketmq-utils</module>
     </modules>
 
     <parent>

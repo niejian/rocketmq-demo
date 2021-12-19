@@ -1,6 +1,6 @@
 package com.code4fun.mq.consumer.listener;
 
-import com.code4fun.mq.consumer.dto.MsgDto;
+import com.code4fun.mq.utils.dto.MsgDto;
 import net.sf.json.JSONObject;
 import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
